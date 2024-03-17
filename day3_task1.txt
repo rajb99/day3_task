@@ -1,0 +1,23 @@
+//to compare two JSON have the same properties without order
+    // using stringify
+    
+function compare(obj1, obj2) {
+	const stObj1 = JSON.stringify(obj1);
+	const stObj2 = JSON.stringify(obj2);
+	if(stObj1 === stObj2)
+	    return true;
+	else
+	    return false;
+}
+
+let obj1 = {
+	name: "Person 1",
+	age: 5
+};
+
+let obj2 = {
+	age: 5,
+	name: "Person 1"
+};
+
+console.log(compare(obj1, obj2));
